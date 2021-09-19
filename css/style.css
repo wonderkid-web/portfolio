@@ -196,6 +196,7 @@ body{
         grid-row-start: 3;
         flex-direction: row;
         justify-self: center;
+        margin-top: 0;
     }
     .icon{
         margin: 0 25px 0 25px;
