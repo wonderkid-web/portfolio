@@ -16,10 +16,10 @@ body{
 }
 .container{
 	width: 100vw;
-	height: 100vh;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 60px 1.5fr 1.5fr 50px;
+    
 }
 .header{
 	background-color: var(--bgHeader);
@@ -70,7 +70,8 @@ body{
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr );
+	grid-template-rows: repeat(5, 300px );
+     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 .content .intro img.sitting{
 	grid-column-start: 4;
@@ -90,6 +91,7 @@ body{
     justify-content: center;
     align-items: center;
 	height: 60%;
+    margin-top: 50px;
 	border: 3px solid black;
 	position: relative;
 	top: 25%;
@@ -163,6 +165,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+    margin-top: 80px;
 }
 .icon{
 	margin-left: 10px;
@@ -171,6 +174,41 @@ body{
 .icon-tw{
 	margin: 25px 0 25px 10px;
 }
-.stars{
-    
+@media only screen and (max-width: 1100px) {
+    .container{
+        grid-template-rows: 100px 1.5fr 1.5fr 50px;
+    }
+    .header{
+        flex-direction: column;
+        padding-top: 15px;
+    }
+    .intro{
+        justify-content: center;
+    }
+    .content .intro img.sitting{
+        margin-top: 40px;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        justify-self: center;
+    }
+    .intro .soc-icon{
+        grid-column-start: 1;
+        grid-row-start: 3;
+        flex-direction: row;
+        justify-self: center;
+    }
+    .icon{
+        margin: 0 25px 0 25px;
+        margin-top: -160px;
+        width: 50px;
+    }
+  
+    .intro .typing{
+        margin-top: -160px;
+        grid-column-start: 1;
+        grid-row-start: 3;
+        height: 70%;
+    }
+
+
 }
